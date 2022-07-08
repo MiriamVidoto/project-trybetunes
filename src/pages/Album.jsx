@@ -28,6 +28,7 @@ class Album extends React.Component {
 
   render() {
     const { arrayMusics, dataAlbum, dataArtist } = this.state;
+
     return (
       <div data-testid="page-album">
         <Header />
@@ -39,11 +40,13 @@ class Album extends React.Component {
           {
             arrayMusics
               .filter((musics, index) => index !== 0)
-              .map(({ trackName, previewUrl }, i) => (
+              .map(({ trackName, previewUrl, trackId }, i) => (
                 <div key={ i }>
                   <MusicCard
                     trackName={ trackName }
                     previewUrl={ previewUrl }
+                    trackId={ trackId }
+                    arrayMusics={ arrayMusics }
                   />
                 </div>
               ))
@@ -57,7 +60,7 @@ class Album extends React.Component {
 Album.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
     }).isRequired,
   }).isRequired,
 };
