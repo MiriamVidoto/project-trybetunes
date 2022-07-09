@@ -31,7 +31,7 @@ class MusicCard extends React.Component {
         .find((music) => music.trackName === name);
       await addSong(dataMusic);
       this.setState({ loading: false });
-    });
+    }, () => this.isFavorite());
   }
 
   render() {
