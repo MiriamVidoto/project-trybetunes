@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/project-solar-system/static/css/main.ccba9085.chunk.css",
+    "main.js": "/project-solar-system/static/js/main.84f560b1.chunk.js",
+    "main.js.map": "/project-solar-system/static/js/main.84f560b1.chunk.js.map",
+    "runtime-main.js": "/project-solar-system/static/js/runtime-main.52dfe1e4.js",
+    "runtime-main.js.map": "/project-solar-system/static/js/runtime-main.52dfe1e4.js.map",
+    "static/js/2.792de4cb.chunk.js": "/project-solar-system/static/js/2.792de4cb.chunk.js",
+    "static/js/2.792de4cb.chunk.js.map": "/project-solar-system/static/js/2.792de4cb.chunk.js.map",
+    "index.html": "/project-solar-system/index.html",
+    "static/css/main.ccba9085.chunk.css.map": "/project-solar-system/static/css/main.ccba9085.chunk.css.map",
+    "static/js/2.792de4cb.chunk.js.LICENSE.txt": "/project-solar-system/static/js/2.792de4cb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.52dfe1e4.js",
+    "static/js/2.792de4cb.chunk.js",
+    "static/css/main.ccba9085.chunk.css",
+    "static/js/main.84f560b1.chunk.js"
+  ]
+}
