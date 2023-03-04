@@ -11,8 +11,7 @@ import Search from './pages/Search';
 class App extends React.Component {
   render() {
     return (
-      <>
-        <p>TrybeTunes</p>
+      <div>
         <Switch>
           <Route path="/" component={ Login } exact />
           <Route path="/search" component={ Search } />
@@ -22,7 +21,7 @@ class App extends React.Component {
           <Route path="/profile/edit" component={ ProfileEdit } />
           <Route path="*" component={ NotFound } />
         </Switch>
-      </>
+      </div>
     );
   }
 }

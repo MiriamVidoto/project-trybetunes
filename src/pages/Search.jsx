@@ -54,33 +54,29 @@ class Search extends React.Component {
     const { search, buttonDisabled, albuns, result, loading } = this.state;
     if (loading) return <Loading />;
     return (
-      <div data-testid="page-search">
+      <div data-testid="page-search" className="search">
         <Header />
         <form>
-          <div>
-            <label htmlFor="searchArtist">
-              <input
-                type="text"
-                name="searchArtist"
-                data-testid="search-artist-input"
-                value={ search }
-                onChange={ this.handleChange }
-              />
-            </label>
-          </div>
-          <div>
-            <button
-              type="button"
-              data-testid="search-artist-button"
-              disabled={ buttonDisabled }
-              onClick={ this.handleClick }
-            >
-              Pesquisar
-            </button>
-          </div>
+          <label htmlFor="searchArtist">
+            <input
+              type="text"
+              name="searchArtist"
+              data-testid="search-artist-input"
+              value={ search }
+              onChange={ this.handleChange }
+            />
+          </label>
+          <button
+            type="button"
+            data-testid="search-artist-button"
+            disabled={ buttonDisabled }
+            onClick={ this.handleClick }
+          >
+            Pesquisar
+          </button>
         </form>
-        <div>
-          <h3>{ result }</h3>
+        <h3>{ result }</h3>
+        <div className="search-results">
           {
             albuns.map(({ collectionId, collectionName, artworkUrl100, artistName }) => (
               <div key={ collectionId } className="card-album">

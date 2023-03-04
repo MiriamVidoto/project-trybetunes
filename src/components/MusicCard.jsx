@@ -46,7 +46,7 @@ class MusicCard extends React.Component {
 
     if (loading) return <Loading />;
     return (
-      <div>
+      <div className="card-music">
         <p>{ trackName }</p>
         <audio data-testid="audio-component" src={ previewUrl } controls>
           <track kind="captions" />

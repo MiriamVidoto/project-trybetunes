@@ -41,9 +41,9 @@ class Login extends React.Component {
 
     if (loading) return <Loading />;
     return (
-      <div data-testid="page-login">
-        login
-        <div>
+      <main data-testid="page-login">
+        <div className="login">
+          <h2>Login</h2>
           <label htmlFor="loginName">
             <input
               data-testid="login-name-input"
@@ -54,8 +54,6 @@ class Login extends React.Component {
               onChange={ this.handleChange }
             />
           </label>
-        </div>
-        <div>
           <button
             data-testid="login-submit-button"
             type="submit"
@@ -65,7 +63,7 @@ class Login extends React.Component {
             Entrar
           </button>
         </div>
-      </div>
+      </main>
     );
   }
 }

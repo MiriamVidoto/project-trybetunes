@@ -4,6 +4,10 @@ Este foi um projeto realizado durante o meu curso na Trybe.
 
 Foi desenvolvido uma aplicação capaz de buscar e reproduzir músicas das mais variadas bandas e artistas, utilizando React.
 
+https://miriamvidoto.github.io/project-trybetunes/
+
+![img](trybetunes.png)
+
 Nessa aplicação, a pessoa usuária poderá:
   - Fazer login;
   - Pesquisar por uma banda ou artista;

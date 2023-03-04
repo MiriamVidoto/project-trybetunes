@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
 import getMusics from '../services/musicsAPI';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Loading from '../components/Loading';
+import Header from '../components/Header';
 
 class Album extends React.Component {
   state = {
@@ -45,26 +45,23 @@ class Album extends React.Component {
 
     if (loading) return <Loading />;
     return (
-      <div data-testid="page-album">
+      <div data-testid="page-album" className="page-album">
         <Header />
-        <div>
-          <div>
-            <h4 data-testid="album-name">{ dataAlbum }</h4>
-            <p data-testid="artist-name">{ dataArtist }</p>
-          </div>
+        <h3 data-testid="album-name">{ dataAlbum }</h3>
+        <span data-testid="artist-name">{ dataArtist }</span>
+        <div className="musics-album">
           {
             arrayMusics
               .filter((musics, index) => index !== 0)
               .map(({ trackName, previewUrl, trackId }, i) => (
-                <div key={ i }>
-                  <MusicCard
-                    trackName={ trackName }
-                    previewUrl={ previewUrl }
-                    trackId={ trackId }
-                    arrayMusics={ arrayMusics }
-                    favoritesMusics={ favoritesMusics }
-                  />
-                </div>
+                <MusicCard
+                  key={ i }
+                  trackName={ trackName }
+                  previewUrl={ previewUrl }
+                  trackId={ trackId }
+                  arrayMusics={ arrayMusics }
+                  favoritesMusics={ favoritesMusics }
+                />
               ))
           }
         </div>
